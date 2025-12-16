@@ -237,51 +237,127 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle" style="text-align: center; color: var(--muted); margin-bottom: 2rem;">Explore my work across cloud platforms, automation, and full-stack development</p>
+
+            <!-- Project Filters -->
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card" data-project='{"title":"Business Listing Platform","images":["/images/bizmerger_web.jpg","/images/bizmerger_web.jpg","/images/bizmerger_web.jpg"],"alt":"Price Alert web UI showing alerts list","desc":"A Twilio-powered price notifier with webhook integration, background workers, and robust retry logic.","tech":["Python","Flask","Twilio","Redis"],"github":"https://github.com/yourname/project1","live":"https://example.com/price-alert"}'>
+                <!-- NASA Worldview Platform -->
+                <div class="project-card" data-category="cloud automation" data-project='{"title":"NASA Worldview Satellite Platform","images":["/images/bizmerger_web.jpg"],"alt":"NASA Worldview satellite platform dashboard","desc":"Fully automated, secure air-quality forecasting platform for NSW Government using NASA satellite data with event-driven pipelines and multi-environment IaC deployment.","tech":["AWS CDK","Python","Lambda","CloudFront","Node.js"],"github":"#","live":"projects/nasa-worldview-platform.html"}'>
                     <picture class="project-media">
-                        <source srcset="images/bizmerger_web.jpg 480w, images/bizmerger_web.jpg 800w, images/bizmerger_web.jpg 1200w" sizes="(max-width:720px) 100vw, 33vw">
-                        <img src="images/bizmerger_web.jpg" alt="Screenshot of Price Alert service web UI showing alerts list" loading="lazy">
+                        <img src="images/bizmerger_web.jpg" alt="NASA Worldview satellite platform" loading="lazy">
                     </picture>
                     <div class="project-info">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">Cloud</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <h3>NASA Worldview Platform</h3>
+                        <p class="text-muted">Automated satellite imagery platform with event-driven pipelines for government air-quality monitoring.</p>
+                        <div class="project-links">
+                            <a href="projects/nasa-worldview-platform.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
+                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finance Automation -->
+                <div class="project-card" data-category="fullstack automation" data-project='{"title":"Finance Automation Suite","images":["/images/bizmerger_web.jpg"],"alt":"Finance automation platform","desc":"End-to-end automated finance platform for lending workflows with commissions, communications, and tax invoicing modules. Developed reusable API integration gem.","tech":["Ruby on Rails","PostgreSQL","Docker","APIs"],"github":"#","live":"projects/finance-automation.html"}'>
+                    <picture class="project-media">
+                        <img src="images/bizmerger_web.jpg" alt="Finance automation platform" loading="lazy">
+                    </picture>
+                    <div class="project-info">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">Full-Stack</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <h3>Finance Automation Suite</h3>
+                        <p class="text-muted">Scalable Ruby on Rails platform with automated compliance workflows and API integrations.</p>
+                        <div class="project-links">
+                            <a href="projects/finance-automation.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
+                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Pipeline -->
+                <div class="project-card" data-category="cloud automation" data-project='{"title":"Event-Driven Data Pipeline","images":["/images/bizmerger_web.jpg"],"alt":"Data pipeline architecture","desc":"Serverless event-driven pipeline for automated geospatial data synchronization across AWS services, reducing transfer latency by 70%.","tech":["Python","AWS Lambda","S3","EventBridge","Step Functions"],"github":"#","live":"#"}'>
+                    <picture class="project-media">
+                        <img src="images/bizmerger_web.jpg" alt="Event-driven data pipeline" loading="lazy">
+                    </picture>
+                    <div class="project-info">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">Cloud</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <h3>Event-Driven Data Pipeline</h3>
+                        <p class="text-muted">Serverless geospatial data sync pipeline with AWS Lambda and S3 triggers.</p>
+                        <div class="project-links">
+                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
+                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ML Document Processor -->
+                <div class="project-card" data-category="ai-ml automation" data-project='{"title":"ML Document Processor","images":["/images/bizmerger_web.jpg"],"alt":"ML document processing interface","desc":"Intelligent document processing system using OCR and ML classification for automated invoice and tax document handling.","tech":["Python","OpenCV","Pytesseract","scikit-learn","FastAPI"],"github":"#","live":"#"}'>
+                    <picture class="project-media">
+                        <img src="images/bizmerger_web.jpg" alt="ML document processor" loading="lazy">
+                    </picture>
+                    <div class="project-info">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">AI/ML</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <h3>ML Document Processor</h3>
+                        <p class="text-muted">OCR and ML-powered document classification for automated invoice processing.</p>
+                        <div class="project-links">
+                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
+                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Listing Platform -->
+                <div class="project-card" data-category="fullstack ai-ml" data-project='{"title":"Business Listing Platform","images":["/images/bizmerger_web.jpg"],"alt":"Business listing platform","desc":"Full-stack business directory with smart search, AI-powered summaries, and interactive dashboards for business discovery.","tech":["Python","Flask","PostgreSQL","Redis","Vue.js"],"github":"#","live":"#"}'>
+                    <picture class="project-media">
+                        <img src="images/bizmerger_web.jpg" alt="Business listing platform" loading="lazy">
+                    </picture>
+                    <div class="project-info">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">Full-Stack</span>
+                            <span class="project-tag">AI/ML</span>
+                        </div>
                         <h3>Business Listing Platform</h3>
-                        <p class="text-muted">Listing, dashboard, smart summaries. </p>
+                        <p class="text-muted">Directory platform with AI summaries, smart search, and analytics dashboards.</p>
                         <div class="project-links">
-                            <a href="https://github.com/yourname/project1" aria-label="Project 1 GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://example.com/price-alert" aria-label="Project 1 live demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                             <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-project='{"title":"Analytics Dashboard","images":["/images/project2-480.jpg","/images/project2-800.jpg","/images/project2-1200.jpg"],"alt":"Dashboard with charts and filters","desc":"Real-time analytics dashboard with WebSocket driven updates and role-based access control.","tech":["TypeScript","Node.js","WebSockets","Postgres"],"github":"https://github.com/yourname/project2","live":"https://example.com/analytics"}'>
+                <!-- Cloud Infrastructure -->
+                <div class="project-card" data-category="cloud" data-project='{"title":"Multi-Environment IaC Platform","images":["/images/bizmerger_web.jpg"],"alt":"Infrastructure as Code platform","desc":"Infrastructure as Code solution using AWS CDK for automated deployment across dev, staging, and production environments with CI/CD integration.","tech":["AWS CDK","Python","CloudFormation","GitHub Actions","Docker"],"github":"#","live":"#"}'>
                     <picture class="project-media">
-                        <source srcset="/images/project2-480.jpg 480w, /images/project2-800.jpg 800w, /images/project2-1200.jpg 1200w" sizes="(max-width:720px) 100vw, 33vw">
-                        <img src="/images/project2-800.jpg" alt="Analytics dashboard with charts and filters" loading="lazy">
+                        <img src="images/bizmerger_web.jpg" alt="IaC platform" loading="lazy">
                     </picture>
                     <div class="project-info">
-                        <h3>Personal</h3>
-                        <p class="text-muted">Real-time metrics with WebSocket updates.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/yourname/project2" aria-label="Project 2 GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://example.com/analytics" aria-label="Project 2 live demo"><i class="fas fa-external-link-alt"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">Cloud</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-project='{"title":"ML Text Classifier","images":["/images/project3-480.jpg","/images/project3-800.jpg","/images/project3-1200.jpg"],"alt":"Console output and evaluation metrics for text classifier","desc":"Lightweight ML pipeline for text classification used for customer categorization and routing.","tech":["Python","scikit-learn","Docker"],"github":"https://github.com/yourname/project3","live":"https://example.com/ml-classifier"}'>
-                    <picture class="project-media">
-                        <source srcset="/images/project3-480.jpg 480w, /images/project3-800.jpg 800w, /images/project3-1200.jpg 1200w" sizes="(max-width:720px) 100vw, 33vw">
-                        <img src="/images/project3-800.jpg" alt="ML text classifier console output and evaluation metrics" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <h3>ML Text Classifier</h3>
-                        <p class="text-muted">Pipeline for customer message categorization.</p>
+                        <h3>Multi-Environment IaC</h3>
+                        <p class="text-muted">AWS CDK-based infrastructure automation with multi-environment deployments.</p>
                         <div class="project-links">
-                            <a href="https://github.com/yourname/project3" aria-label="Project 3 GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://example.com/ml-classifier" aria-label="Project 3 live demo"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                             <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
                         </div>
                     </div>
