@@ -6,15 +6,37 @@ document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.nav-link');
   const navbar = document.querySelector('.navbar');
 
-  // Navbar scroll effect
+  // Navbar scroll effect and active section highlighting
   let lastScroll = 0;
+  const sections = document.querySelectorAll('section[id]');
+
   window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
+
+    // Navbar scroll effect
     if (currentScroll > 100) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
+
+    // Active section highlighting
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (currentScroll >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+
     lastScroll = currentScroll;
   });
 
@@ -26,9 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Close mobile nav on link click
+  // Close mobile nav on link click and set active state
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
+      // Remove active class from all links
+      navLinks.forEach(l => l.classList.remove('active'));
+      // Add active class to clicked link
+      link.classList.add('active');
+
       hamburger && hamburger.classList.remove('open');
       body.classList.remove('nav-open');
     });
@@ -270,5 +297,40 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
       content.classList.remove('active');
     });
     document.getElementById(tab).classList.add('active');
+  });
+});
+
+// Experience Accordion
+document.addEventListener('DOMContentLoaded', function() {
+  const accordionToggles = document.querySelectorAll('.experience-item .accordion-toggle');
+
+  accordionToggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const experienceItem = this.closest('.experience-item');
+      const isActive = experienceItem.classList.contains('active');
+
+      // Close all experience items
+      document.querySelectorAll('.experience-item').forEach(item => {
+        item.classList.remove('active');
+        const itemToggle = item.querySelector('.accordion-toggle');
+        if (itemToggle) {
+          itemToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // If the clicked item was not active, open it
+      if (!isActive) {
+        experienceItem.classList.add('active');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Keyboard accessibility
+    toggle.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
   });
 });

@@ -6,6 +6,11 @@
     <meta name="description" content="Kiri Kamalanathan — Full‑Stack Engineer specializing in modern web apps, cloud, and ML-enabled solutions.">
     <title>Kiri Kamalanathan — Portfolio</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Devicon v2 – working version 2025 -->
@@ -38,18 +43,15 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
+        <div class="top-nav">
             <div class="nav-logo">KIRI'S PORTFOLIO</div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#experiences" class="nav-link">Experience</a></li>
                 <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-
-            <!-- Resume download button -->
-            <!-- <a href="assets/Kiri_Kamalanathan_Resume_2025.pdf" download="Kiri_Kamalanathan_Resume_2025.pdf" class="btn btn-secondary" aria-label="Download resume" target="_blank">Resume</a> -->
 
             <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
                 <span></span>
@@ -59,80 +61,227 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with About Me -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Kiri Kamalanathan</h1>
-            <p class="hero-subtitle">Full‑Stack Engineer • Cloud & AI</p>
-            <p class="hero-desc">Building reliable, scalable web apps and intelligent systems — from prototype to production.</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact</a>
+            <div class="hero-text">
+                <h1 class="hero-title">Kiri Kamalanathan</h1>
+                <p class="hero-subtitle">Full‑Stack Engineer • Cloud & AI</p>
+                <p class="hero-desc">Building reliable, scalable web apps and intelligent systems — from prototype to production.</p>
+
+                <p class="hero-about">Senior Software Engineer focused on cloud-native systems, geospatial data pipelines, and production-ready automation. I combine systems thinking with pragmatic engineering to deliver reliable platforms and intuitive UX.</p>
+
+                <!-- <p class="hero-about-muted">I enjoy turning ambiguous problems into robust systems — designing architecture, automating pipelines, and shipping features that reduce operational overhead and accelerate business outcomes.</p> -->
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="assets/Kiri_Kamalanathan_Resume_2025.pdf" class="btn btn-secondary" download target="_blank">Download Resume</a>
+                    <!-- <a href="#contact" class="btn btn-secondary">Get in Touch</a> -->
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img
+                    class="hero-image"
+                    src="images/profile_kiri.jpeg"
+                    srcset="images/profile_kiri.jpeg 240w, images/profile_kiri.jpeg 480w, images/profile_kiri.jpeg 800w"
+                    sizes="(max-width:720px) 100vw, 280px"
+                    alt="Portrait of Kiri Kamalanathan — Full‑Stack Engineer"
+                    loading="eager">
             </div>
         </div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">Senior Software Engineer focused on cloud-native systems, geospatial data pipelines, and production-ready automation. I combine systems thinking with pragmatic engineering to deliver reliable platforms and intuitive UX.</p>
-                    <p class="text-muted">I enjoy turning ambiguous problems into robust systems — designing architecture, automating pipelines, and shipping features that reduce operational overhead and accelerate business outcomes.</p>
-                    <div class="about-cta">
-                        <a href="assets/Kiri_Kamalanathan_Resume_2025.pdf" class="btn btn-primary" download target="_blank">Download Resume</a>
-                        <a href="#contact" class="btn btn-secondary">Get in touch</a>
-                    </div>
-                </div>
-
-                <div class="about-image">
-                    <img
-                        src="images/profile_kiri.jpeg"
-                        srcset="images/profile_kiri.jpeg 240w, images/profile_kiri.jpeg 480w, images/profile_kiri.jpeg 800w"
-                        sizes="(max-width:720px) 100vw, 320px"
-                        alt="Portrait of Kiri Kamalanathan — Full‑Stack Engineer"
-                        loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experiences (separate, timeline style) -->
+    <!-- Experiences (accordion style) -->
     <section id="experiences" class="experience-section">
       <div class="container">
         <h2 class="section-title">Professional Experience</h2>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 class="role">Senior Software Engineer — Intersect</h3>
-                <span class="meta">09/2023 — Present · Sydney, AUS</span>
-              </div>
-              <p class="role-summary">Leading engineering work on geospatial and event-driven data platforms, delivering automated, secure satellite imagery services for government clients.</p>
-              <ul class="role-bullets">
-                <li>Architected and delivered a fully automated, secure NASA Worldview satellite imagery platform for a NSW government department to provide air‑quality forecasting layers for monitoring, analysis and assessment of air‑quality and extreme events using AWS CDK (Python) and IaC across environments.</li>
-                <li>Led development of event-driven data pipelines in Python & AWS Lambda to automatically move and synchronise geospatial datasets across AWS storage services, reducing transfer latency and operational overhead.</li>
-                <li>Customized, rebranded and deployed a Node.js application to deliver a fully branded satellite forecast data visualization platform (CloudFront hosted).</li>
-              </ul>
-            </div>
-          </div>
+        <div class="experience-accordion">
+          <div class="accordion-item">
+            <div class="accordion-content">
 
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 class="role">Software Engineer — BrykGroup</h3>
-                <span class="meta">01/2022 — 08/2023 · Melbourne, AUS</span>
+              <!-- Experience 1 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Sep 2023 — Nov 2025</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Senior Software Engineer</h3>
+                      <span class="company-name">Intersect, Sydney</span>
+                    </div>
+                  </div>
+                  <div class="accordion-toggle" role="button" tabindex="0" aria-expanded="false">
+                    <span class="toggle-label">Highlights</span>
+                    <i class="fas fa-times accordion-icon"></i>
+                  </div>
+                  <div class="accordion-body">
+                    <ul class="role-bullets">
+                      <li>Architected and delivered a fully automated, secure NASA Worldview satellite imagery platform for a NSW government department to provide air‑quality forecasting layers for monitoring, analysis and assessment of air‑quality and extreme events using AWS CDK (Python) and IaC across environments.</li>
+                      <li>Led development of event-driven data pipelines in Python & AWS Lambda to automatically move and synchronise geospatial datasets across AWS storage services, reducing transfer latency and operational overhead.</li>
+                      <li>Customized, rebranded and deployed a Node.js application to deliver a fully branded satellite forecast data visualization platform (CloudFront hosted).</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <p class="role-summary">Worked across product features and platform services for an automated finance solution used by finance professionals nationwide.</p>
-              <ul class="role-bullets">
-                <li>Contributed to an end-to-end automated finance platform built on Ruby on Rails, delivering core features for accounting workflows.</li>
-                <li>Delivered major modules (Commissions, Communications, Tax Invoicing), improving operational efficiency and regulatory compliance.</li>
-                <li>Developed a reusable Ruby gem centralising third-party API integrations (Creditor Watch, GlassGuide, Sypht OCR), reducing duplication and improving security across microservices.</li>
-              </ul>
+
+              <!-- Experience 2 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Jan 2022 — Aug 2023</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Software Engineer</h3>
+                      <span class="company-name">BrykGroup, Melbourne</span>
+                    </div>
+                  </div>
+                  <div class="accordion-toggle" role="button" tabindex="0" aria-expanded="false">
+                    <span class="toggle-label">Highlights</span>
+                    <i class="fas fa-times accordion-icon"></i>
+                  </div>
+                  <div class="accordion-body">
+                    <ul class="role-bullets">
+                      <li>Contributed to an end-to-end automated finance platform built on Ruby on Rails, delivering core features for accounting workflows.</li>
+                      <li>Delivered major modules (Commissions, Communications, Tax Invoicing), improving operational efficiency and regulatory compliance.</li>
+                      <li>Developed a reusable Ruby gem centralising third-party API integrations (Creditor Watch, GlassGuide, Sypht OCR), reducing duplication and improving security across microservices.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience 3 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Jul 2021 — Dec 2021</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Senior Software Engineer</h3>
+                      <span class="company-name">Connected Communities Technology Pty Ltd, Perth (Remote)</span>
+                    </div>
+                  </div>
+                  <div class="accordion-toggle" role="button" tabindex="0" aria-expanded="false">
+                    <span class="toggle-label">Highlights</span>
+                    <i class="fas fa-times accordion-icon"></i>
+                  </div>
+                  <div class="accordion-body">
+                    <ul class="role-bullets">
+                      <li>Contributed to an end-to-end automated finance platform built on Ruby on Rails, delivering core features for accounting workflows.</li>
+                      <li>Delivered major modules (Commissions, Communications, Tax Invoicing), improving operational efficiency and regulatory compliance.</li>
+                      <li>Developed a reusable Ruby gem centralising third-party API integrations (Creditor Watch, GlassGuide, Sypht OCR), reducing duplication and improving security across microservices.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience 4 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Nov 2017 — Jun 2021</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Full-Stack Developer</h3>
+                      <span class="company-name">Environmental Monitoring Solutions (EMS), Melbourne</span>
+                    </div>
+                  </div>
+                  <div class="accordion-toggle" role="button" tabindex="0" aria-expanded="false">
+                    <span class="toggle-label">Highlights</span>
+                    <i class="fas fa-times accordion-icon"></i>
+                  </div>
+                  <div class="accordion-body">
+                    <ul class="role-bullets">
+                      <li>Engineered core features for a cloud-based fuel management solution to provide real-time monitoring and control of fuel storage tanks and dispensers at petrol stations and processing tens of thousands of IoT messages per minute across global regions using Ruby on Rails.</li>
+                      <li>Improved system reliability to 99.9% through pipeline optimization and robust API architecture.</li>
+                      <li>Developed Vue.js dashboards for enabling near real-time visibility and critical metrics for fuels and integrated Highcharts for data visualization.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience 5 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Apr 2015 — Nov 2017</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Full-stack Developer (.NET)</h3>
+                      <span class="company-name">Temenos, Melbourne</span>
+                    </div>
+                  </div>
+                  <div class="accordion-toggle" role="button" tabindex="0" aria-expanded="false">
+                    <span class="toggle-label">Highlights</span>
+                    <i class="fas fa-times accordion-icon"></i>
+                  </div>
+                  <div class="accordion-body">
+                    <ul class="role-bullets">
+                      <li>Participated in development and enhancement of Symmetry CRM, a sophisticated loan management toolkit for mortgage professionals nationwide.</li>
+                      <li>Built and maintained Loan Toolkit modules including legacy web services, Translating complex loan calculation logic into efficient and secure web services.</li>
+                      <li>Authored SQL ETL scripts to load and transform loan product data into SQL Server, ensuring data integrity & optimal performance.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience 6 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Jul 2012 — Mar 2015</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">IT Consultant / Full-stack Developer</h3>
+                      <span class="company-name">ITWerks Proprietary Limited, Melbourne</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience 7 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Jan 2010 — Jan 2012</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Software Engineer (.NET)</h3>
+                      <span class="company-name">Third Sight Pvt Ltd, Singapore</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience 8 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Sep 2006 — Jul 2009</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Software Engineer (.NET)</h3>
+                      <span class="company-name">NxGen Communications Pvt Ltd, Singapore</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Experience 9 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Jun 2006 — Aug 2006</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">Senior System Engineer</h3>
+                      <span class="company-name">Agatos Software Engineering Pvt Ltd, Singapore</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -394,21 +543,32 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>Let's connect! Reach out for collaborations or just a chat.</p>
-                    <div class="contact-links">
-                        <a href="mailto:kiri.kamalanathan@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                        <a href="https://www.linkedin.com/in/kirikamal"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://github.com/kirikamal"><i class="fab fa-github"></i> GitHub</a>
+            <p class="contact-subtitle">Let's connect! Reach out for collaborations or just a chat.</p>
+
+            <div class="contact-cards">
+                <a href="mailto:kiri.kamalanathan@gmail.com" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
                     </div>
-                </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                    <h3>Email</h3>
+                    <p>kiri.kamalanathan@gmail.com</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/kirikamal" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>linkedin.com/in/kirikamal</p>
+                </a>
+
+                <a href="https://github.com/kirikamal" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>github.com/kirikamal</p>
+                </a>
             </div>
         </div>
     </section>
