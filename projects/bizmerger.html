@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bizmerger | Kiri Kamalanathan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="top-nav">
+            <div class="nav-logo">KIRI'S PORTFOLIO</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#experiences" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero" style="padding: 8rem 0 4rem; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; text-align: center;">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link" style="color: white; text-decoration: none; display: inline-block; margin-bottom: 2rem;">← Back to Projects</a>
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Bizmerger</h1>
+            <p class="project-summary" style="font-size: 1.2rem; opacity: 0.9;">Commercial real estate platform.</p>
+            <div class="project-meta" style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem; font-size: 1rem;">
+                <span><strong>Client:</strong> Kesh Muthu, Singapore</span>
+                <span><strong>Role:</strong> Lead Developer & DevOps Engineer</span>
+                <span><strong>Year:</strong> 2013–2025</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container project-content" style="padding: 4rem 0; max-width: 900px; margin: 0 auto;">
+        <img src="../images/bizmerger_web.jpg" alt="Full NASA platform dashboard" class="project-full" style="width: 100%; border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Challenge</h2>
+        <p style="color: var(--muted); line-height: 1.7; margin-bottom: 2rem;">Deliver near-real-time satellite imagery layers with zero manual intervention, high availability, and strict security compliance for government air-quality monitoring.</p>
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Solution</h2>
+        <ul style="color: var(--muted); line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Automated daily ingestion of NASA Worldview GeoTIFFs via AWS Lambda + S3 triggers</li>
+            <li>CDK-deployed multi-environment infrastructure (dev/staging/prod) with IaC for scalability</li>
+            <li>CloudFront + S3 static hosting with custom domain, branding, and role-based access</li>
+            <li>Event-driven pipelines in Python to sync geospatial datasets, reducing latency by 70%</li>
+        </ul>
+
+        <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem;">
+            <span class="pill" style="--pill-bg:#ff9900;--pill-color:#111;"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</span>
+            <span class="pill" style="--pill-bg:#3776ab;"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="pill" style="--pill-bg:#0db7ed;"><i class="devicon-docker-plain colored"></i> Docker</span>
+            <span class="pill" style="--pill-bg:#3c873a;"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="pill"><i class="devicon-git-plain colored"></i> CDK</span>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="../index.html#contact" class="btn btn-primary" style="margin-top: 3rem; display: inline-block;">Let’s work together →</a>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 5rem;">
+        <!-- Copy footer from index.html -->
+        <div class="container"><p>&copy; 2025 Kiri Kamalanathan. All rights reserved.</p></div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
