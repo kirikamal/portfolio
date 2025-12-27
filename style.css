@@ -230,6 +230,7 @@ body::before {
   font-size:1rem;
   margin-bottom:1rem;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .hero-about-muted{
@@ -243,6 +244,7 @@ body::before {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .hero-image-wrapper{

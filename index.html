@@ -66,11 +66,12 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">Kiri Kamalanathan</h1>
-                <p class="hero-subtitle">Full‑Stack Engineer • Cloud & AI</p>
-                <p class="hero-desc">Building reliable, scalable web apps and intelligent systems — from prototype to production.</p>
+                <p class="hero-subtitle">Full‑Stack Software Engineer • Cloud & AI</p>
+                <!-- <p class="hero-desc">Building reliable, scalable web apps and intelligent systems from prototype to production.</p> -->
 
-                <p class="hero-about">Senior Software Engineer focused on cloud-native systems, geospatial data pipelines, and production-ready automation. I combine systems thinking with pragmatic engineering to deliver reliable platforms and intuitive UX.</p>
-
+                <p class="hero-about">
+                    Senior Software Engineer building scalable web applications and intelligent systems from cloud-native platforms and geospatial pipelines to AI/ML powered automation focused on reliability, clean architecture, and intuitive user experiences.
+                </p>
                 <!-- <p class="hero-about-muted">I enjoy turning ambiguous problems into robust systems — designing architecture, automating pipelines, and shipping features that reduce operational overhead and accelerate business outcomes.</p> -->
 
                 <div class="hero-buttons">
@@ -159,7 +160,7 @@
                     <span class="period">Jul 2021 — Dec 2021</span>
                     <div class="role-company-row">
                       <h3 class="role-title">Senior Software Engineer</h3>
-                      <span class="company-name">Connected Communities Technology Pty Ltd, Perth (Remote)</span>
+                      <span class="company-name">Connected Communities Technology Pty Ltd, Perth</span>
                     </div>
                   </div>
                   <div class="accordion-toggle" role="button" tabindex="0" aria-expanded="false">
@@ -399,45 +400,58 @@
             </div>
 
             <div class="projects-grid">
-                <!-- NASA Worldview Platform -->
-                <div class="project-card" data-category="cloud automation" data-project='{"title":"NASA Worldview Satellite Platform","images":["/images/bizmerger_web.jpg"],"alt":"NASA Worldview satellite platform dashboard","desc":"Fully automated, secure air-quality forecasting platform for NSW Government using NASA satellite data with event-driven pipelines and multi-environment IaC deployment.","tech":["AWS CDK","Python","Lambda","CloudFront","Node.js"],"github":"#","live":"projects/nasa-worldview-platform.html"}'>
+                <div class="project-card" data-category="fullstack ai-ml" data-project='{"title":"Business Listing Platform","images":["/images/bizmerger_web.jpg"],"alt":"Business listing platform","desc":"Full-stack business directory with smart search, AI-powered summaries, and interactive dashboards for business discovery.","tech":["Ruby on Rails","Hotwire","Monolithic","PostgreSQL"],"live":"https://www.bizmerger.com"}'>
                     <picture class="project-media">
-                        <img src="images/bizmerger_web.jpg" alt="NASA Worldview satellite platform" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
-                            <span class="project-tag">Cloud</span>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <h3>NASA Worldview Platform</h3>
-                        <p class="text-muted">Automated satellite imagery platform with event-driven pipelines for government air-quality monitoring.</p>
-                        <div class="project-links">
-                            <a href="projects/nasa-worldview-platform.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Finance Automation -->
-                <div class="project-card" data-category="fullstack automation" data-project='{"title":"Finance Automation Suite","images":["/images/bizmerger_web.jpg"],"alt":"Finance automation platform","desc":"End-to-end automated finance platform for lending workflows with commissions, communications, and tax invoicing modules. Developed reusable API integration gem.","tech":["Ruby on Rails","PostgreSQL","Docker","APIs"],"github":"#","live":"projects/finance-automation.html"}'>
-                    <picture class="project-media">
-                        <img src="images/bizmerger_web.jpg" alt="Finance automation platform" loading="lazy">
+                        <img src="images/bizmerger_web.jpg" alt="Business listing platform" loading="lazy">
                     </picture>
                     <div class="project-info">
                         <div style="margin-bottom: 0.5rem;">
                             <span class="project-tag">Full-Stack</span>
-                            <span class="project-tag">Automation</span>
                         </div>
-                        <h3>Finance Automation Suite</h3>
-                        <p class="text-muted">Scalable Ruby on Rails platform with automated compliance workflows and API integrations.</p>
+                        <h3>Business Listing Platform</h3>
+                        <p class="text-muted">Business Listing platform with AI summaries, smart search, and analytics dashboards.</p>
                         <div class="project-links">
-                            <a href="projects/finance-automation.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
+                            <a href="projects/bizmerger.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
                             <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Data Pipeline -->
+                <div class="project-card" data-category="cloud automation" data-project='{"title":"MediParse","images":["/images/medi_parse.png"],"alt":"MediParse","desc":"Automated medical data processing platform.","tech":["Python","FastAPI","OpenCV","Tesseract OCR"],"github":"https://github.com/kirikamal/MediParse"}'>
+                    <picture class="project-media">
+                        <img src="images/medi_parse.png" alt="MediParse medical plaform" loading="lazy">
+                    </picture>
+                    <div class="project-info">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">AI/ML</span>
+                        </div>
+                        <h3>MediParse</h3>
+                        <p class="text-muted">A Python-based medical document parsing system using Computer Vision and OCR to extract structured prescription and patient data from scanned forms.</p>
+                        <div class="project-links">
+                            <a href="projects/medi-parse.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
+                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack automation" data-project='{"title":"Expense Trackr","images":["/images/expense_trackr_1.png"],"alt":"Expense Trackr","desc":"Expense tracking system. Developed using Python, FastAPI and MySQL.","tech":["Python","MySQL","FastAPI","Streamlit"],"github":"https://github.com/kirikamal/expense-trackr"}'>
+                    <picture class="project-media">
+                        <img src="images/expense_trackr_1.png" alt="Expense trackr" loading="lazy">
+                    </picture>
+                    <div class="project-info">
+                        <div style="margin-bottom: 0.5rem;">
+                            <span class="project-tag">Full-Stack</span>
+                        </div>
+                        <h3>Expense Trackr</h3>
+                        <p class="text-muted">A full-stack Python application using FastAPI for a RESTful backend and Streamlit for an interactive frontend, built with clean architecture and extensibility in mind.</p>
+                        <div class="project-links">
+                            <a href="projects/expense-trackr.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
+                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-card" data-category="cloud automation" data-project='{"title":"Event-Driven Data Pipeline","images":["/images/bizmerger_web.jpg"],"alt":"Data pipeline architecture","desc":"Serverless event-driven pipeline for automated geospatial data synchronization across AWS services, reducing transfer latency by 70%.","tech":["Python","AWS Lambda","S3","EventBridge","Step Functions"],"github":"#","live":"#"}'>
                     <picture class="project-media">
                         <img src="images/bizmerger_web.jpg" alt="Event-driven data pipeline" loading="lazy">
@@ -456,7 +470,6 @@
                     </div>
                 </div>
 
-                <!-- ML Document Processor -->
                 <div class="project-card" data-category="ai-ml automation" data-project='{"title":"ML Document Processor","images":["/images/bizmerger_web.jpg"],"alt":"ML document processing interface","desc":"Intelligent document processing system using OCR and ML classification for automated invoice and tax document handling.","tech":["Python","OpenCV","Pytesseract","scikit-learn","FastAPI"],"github":"#","live":"#"}'>
                     <picture class="project-media">
                         <img src="images/bizmerger_web.jpg" alt="ML document processor" loading="lazy">
@@ -468,25 +481,6 @@
                         </div>
                         <h3>ML Document Processor</h3>
                         <p class="text-muted">OCR and ML-powered document classification for automated invoice processing.</p>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Business Listing Platform -->
-                <div class="project-card" data-category="fullstack ai-ml" data-project='{"title":"Business Listing Platform","images":["/images/bizmerger_web.jpg"],"alt":"Business listing platform","desc":"Full-stack business directory with smart search, AI-powered summaries, and interactive dashboards for business discovery.","tech":["Python","Flask","PostgreSQL","Redis","Vue.js"],"github":"#","live":"#"}'>
-                    <picture class="project-media">
-                        <img src="images/bizmerger_web.jpg" alt="Business listing platform" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
-                            <span class="project-tag">Full-Stack</span>
-                            <span class="project-tag">AI/ML</span>
-                        </div>
-                        <h3>Business Listing Platform</h3>
-                        <p class="text-muted">Directory platform with AI summaries, smart search, and analytics dashboards.</p>
                         <div class="project-links">
                             <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
                             <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
