@@ -7,17 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
-    <nav class="navbar">
+    <!-- <nav class="navbar">
         <div class="top-nav">
             <div class="nav-logo">KIRI'S PORTFOLIO</div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#experiences" class="nav-link">Experience</a></li>
-                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../index.html#experiences" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
             </ul>
 
             <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
@@ -26,39 +28,46 @@
                 <span></span>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
-    <section class="project-hero" style="padding: 8rem 0 4rem; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; text-align: center;">
+    <section class="project-hero" style="padding: 0; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; text-align: center;">
         <div class="container">
-            <a href="../index.html#projects" class="back-link" style="color: white; text-decoration: none; display: inline-block; margin-bottom: 2rem;">← Back to Projects</a>
-            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Expense Trackr</h1>
+            <a href="../index.html#projects" class="back-link" style="color: white; text-decoration: none; display: inline-block; margin-bottom: 0rem;">← Back to Projects</a>
+            <!-- <h1 style="font-size: 3rem; margin-bottom: 1rem;">Expense Trackr</h1>
             <p class="project-summary" style="font-size: 1.2rem; opacity: 0.9;"></p>
             <div class="project-meta" style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem; font-size: 1rem;">
                 <span><strong>Role:</strong> Solo Developer</span>
                 <span><strong>Year:</strong> 2025</span>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <div class="container project-content" style="padding: 4rem 0; max-width: 900px; margin: 0 auto;">
-        <img src="../images/expense_trackr_2.png" alt="Expense Trackr platform" class="project-full" style="width: 100%; border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Expense Trackr</h2>
+        <img src="../images/expense_trackr_2.png" alt="Expense Trackr platform" class="project-full" style="width: 60%; border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
 
-        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Challenge</h2>
-        <p style="color: var(--muted); line-height: 1.7; margin-bottom: 2rem;">Expense Trackr is an automated system designed to extract and categorize expense data from receipts using Computer Vision techniques. The solution combines OCR technology with image preprocessing to ensure high accuracy in data extraction from scanned receipts.</p>
-
-        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Solution</h2>
-        <ul style="color: var(--muted); line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
-            <li><strong>Automated Data Extraction:</strong> Processes PDF medical forms without manual intervention</li>
-            <li><strong>High Accuracy:</strong> Utilizes OpenCV image preprocessing for improved OCR results</li>
-            <li><strong>Structured Output:</strong> Converts unstructured medical forms into formatted, usable data</li>
-            <li><strong>Scalable Pipeline:</strong> Handles multiple document formats and layouts</li>
+        <p style="line-height: 1.7; margin-bottom: 2rem; text-align: justify;">
+            A full-stack expense tracking application built with a FastAPI backend and a Streamlit frontend, designed to demonstrate clean API design, modern Python practices, and rapid UI prototyping.
+        </p>
+        <p style="line-height: 1.7; margin-bottom: 2rem; text-align: justify">
+            The backend exposes RESTful endpoints for managing expense data, handling business logic, and integrating with a relational database, while the frontend provides an interactive interface for recording, viewing, and analyzing expenses in real time. The application emphasizes a clear separation of concerns, reproducible local setup, and an architecture that can be easily extended to a React-based frontend in future iterations.
+        </p>
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Features</h2>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Expense categories</li>
+            <li>Expenses breakdown by categories</li>
+            <li>Analytics of monthly expenses</li>
         </ul>
 
+        <h3 style="color: #00d4ff; margin-bottom: 1rem;">Tech Stack</h3>
         <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem;">
             <span class="pill" style="--pill-bg:#3776ab;"><i class="devicon-python-plain colored"></i> Python</span>
-            <span class="pill" style="--pill-bg:#0db7ed;"><i class="devicon-docker-plain colored"></i> OpenCV</span>
-            <span class="pill" style="--pill-bg:#3c873a;"><i class="devicon-nodejs-plain colored"></i> pytesseract</span>
-            <span class="pill"><i class="devicon-git-plain colored"></i> Regex</span>
+            <span class="pill" style="--pill-bg:#229585;"><i class="devicon-fastapi-plain"></i> FastAPI</span>
+            <span class="pill" style="--pill-bg:#00618a;"><i class="devicon-mysql-plain"></i> MySQL</span>
+        </div>
+
+        <div>
+            <a href="https://github.com/kirikamal/expense-trackr" target="_blank" aria-label="GitHub repository"><i class="fab fa-github"></i>&nbsp;&nbsp;Expense Trackr repository</a>
         </div>
 
         <div style="text-align: center;">

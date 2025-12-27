@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="pdfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="imageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cleanedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="extractedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="formattedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#30cfd0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#330867;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="500" fill="#f8f9fa"/>
+  
+  <!-- PDF File Box -->
+  <rect x="30" y="30" width="140" height="100" rx="20" fill="url(#pdfGrad)" filter="url(#shadow)"/>
+  <text x="100" y="85" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">PDF File</text>
+  
+  <!-- Arrow 1: PDF to Image -->
+  <defs>
+    <marker id="arrowhead1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+  </defs>
+  <line x1="170" y1="80" x2="280" y2="80" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead1)"/>
+  <text x="225" y="60" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#e74c3c" text-anchor="middle">PDF to Image</text>
+  <text x="225" y="77" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#e74c3c" text-anchor="middle">conversion</text>
+  <text x="225" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="500" fill="#3498db" text-anchor="middle">pdf2image</text>
+  
+  <!-- Image File Box -->
+  <rect x="280" y="30" width="140" height="100" rx="20" fill="url(#imageGrad)" filter="url(#shadow)"/>
+  <text x="350" y="85" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Image File</text>
+  
+  <!-- Arrow 2: Image processing -->
+  <defs>
+    <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+  </defs>
+  <line x1="420" y1="80" x2="530" y2="80" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead2)"/>
+  <text x="475" y="60" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#e74c3c" text-anchor="middle">Image</text>
+  <text x="475" y="77" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#e74c3c" text-anchor="middle">processing</text>
+  <text x="475" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="500" fill="#3498db" text-anchor="middle">OpenCV</text>
+  
+  <!-- Cleaned Image File Box -->
+  <rect x="530" y="30" width="140" height="100" rx="20" fill="url(#cleanedGrad)" filter="url(#shadow)"/>
+  <text x="600" y="78" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Cleaned</text>
+  <text x="600" y="97" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Image File</text>
+  
+  <!-- Arrow 3: Extract Text (vertical) -->
+  <defs>
+    <marker id="arrowhead3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+  </defs>
+  <line x1="600" y1="130" x2="600" y2="240" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead3)"/>
+  <text x="640" y="185" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#e74c3c" text-anchor="start">Extract Text</text>
+  <text x="630" y="200" font-family="Arial, sans-serif" font-size="12" font-weight="500" fill="#3498db" text-anchor="start">pytesseract</text>
+  
+  <!-- Extracted Text Box -->
+  <rect x="530" y="240" width="140" height="100" rx="20" fill="url(#extractedGrad)" filter="url(#shadow)"/>
+  <text x="600" y="283" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Extracted</text>
+  <text x="600" y="302" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Text</text>
+  
+  <!-- Arrow 4: Regex -->
+  <defs>
+    <marker id="arrowhead4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#e74c3c" />
+    </marker>
+  </defs>
+  <line x1="530" y1="290" x2="420" y2="290" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead4)"/>
+  <text x="475" y="280" font-family="Arial, sans-serif" font-size="12" font-weight="500" fill="#3498db" text-anchor="middle">Regex</text>
+  
+  <!-- Formatted Data Box -->
+  <rect x="280" y="240" width="140" height="100" rx="20" fill="url(#formattedGrad)" filter="url(#shadow)"/>
+  <text x="350" y="283" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Formatted</text>
+  <text x="350" y="302" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">Data</text>
+  
+  <!-- Title -->
+  <text x="450" y="460" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50" text-anchor="middle">MediParse Processing Pipeline</text>
+</svg>

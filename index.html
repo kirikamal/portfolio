@@ -48,6 +48,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#experiences" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
                 <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
@@ -290,6 +291,35 @@
       </div>
     </section>
 
+    <!-- Education -->
+    <section id="education" class="experience-section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <div class="experience-accordion">
+          <div class="accordion-item">
+            <div class="accordion-content">
+
+              <!-- Experience 1 -->
+              <div class="experience-item">
+                <div class="timeline-dot"></div>
+                <div class="experience-content">
+                  <div class="experience-header">
+                    <span class="period">Nov 1998 — Sep 2002</span>
+                    <div class="role-company-row">
+                      <h3 class="role-title">BSc (Hons) in Information Systems - Manchester Metropolitan University, UK</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Skills Section – Working Devicon 2025 -->
     <section id="skills" class="skills">
         <div class="container">
@@ -309,15 +339,14 @@
             <div class="skill-category">
                 <h3>Frontend Development</h3>
                 <div class="skills-pills">
-                    <span class="pill" style="--pill-bg:#FA5554;"><i class="devicon-streamlit-plain colored"></i> Streamlit</span>
-                    <span class="pill" style="--pill-bg:#f7df1e;--pill-color:#111;"><i class="devicon-javascript-plain"></i> JavaScript</span>
-                    <span class="pill" style="--pill-bg:#3178C6;"><i class="devicon-typescript-plain"></i> TypeScript</span>
-                    <span class="pill" style="--pill-bg:#41DD82;--pill-color:#111;"><i class="devicon-nuxt-original"></i> Nuxt.js</span>
+                  <span class="pill" style="--pill-bg:#f7df1e;--pill-color:#111;"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                  <span class="pill" style="--pill-bg:#3178C6;"><i class="devicon-typescript-plain"></i> TypeScript</span>
+                  <span class="pill" style="--pill-bg:#41DD82;--pill-color:#111;"><i class="devicon-nuxt-original"></i> Nuxt.js</span>
+                  <span class="pill" style="--pill-bg:#FA5554;"><i class="devicon-streamlit-plain colored"></i> Streamlit</span>
                     <span class="pill" style="--pill-bg:#12BCFF;"><i class="devicon-tailwindcss-plain"></i> Tailwind</span>
                     <span class="pill" style="--pill-bg:#702BF7;"><i class="devicon-bootstrap-plain"></i> Bootstrap</span>
                     <span class="pill" style="--pill-bg:#f97316;"><i class="devicon-html5-plain"></i> HTML5</span>
                     <span class="pill" style="--pill-bg:#3858E9;"><i class="devicon-wordpress-plain"></i> Wordpress</span>
-                    <span class="pill" style="--pill-bg:#0ea5e9;"><i class="devicon-css3-plain"></i> CSS3</span>
                 </div>
             </div>
 
@@ -393,14 +422,14 @@
             <!-- Project Filters -->
             <div class="project-filter">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+                <!-- <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button> -->
                 <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
                 <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
                 <button class="filter-btn" data-filter="automation">Automation</button>
             </div>
 
             <div class="projects-grid">
-                <div class="project-card" data-category="fullstack ai-ml" data-project='{"title":"Business Listing Platform","images":["/images/bizmerger_web.jpg"],"alt":"Business listing platform","desc":"Full-stack business directory with smart search, AI-powered summaries, and interactive dashboards for business discovery.","tech":["Ruby on Rails","Hotwire","Monolithic","PostgreSQL"],"live":"https://www.bizmerger.com"}'>
+                <div class="project-card" data-category="fullstack" data-project='{"title":"Bizmerger","images":["/images/bizmerger_web.jpg"],"alt":"Bizmerger","desc":"Ruby on Rails based real-estate platform with smart search, AI-powered summaries, and interactive dashboards for Commercial business.","tech":["Ruby on Rails","Hotwire","Monolithic","PostgreSQL"],"live":"https://www.bizmerger.com"}'>
                     <picture class="project-media">
                         <img src="images/bizmerger_web.jpg" alt="Business listing platform" loading="lazy">
                     </picture>
@@ -408,8 +437,8 @@
                         <div style="margin-bottom: 0.5rem;">
                             <span class="project-tag">Full-Stack</span>
                         </div>
-                        <h3>Business Listing Platform</h3>
-                        <p class="text-muted">Business Listing platform with AI summaries, smart search, and analytics dashboards.</p>
+                        <h3>Bizmerger</h3>
+                        <p class="text-muted">Real-estate platform for commercial businesses with AI summaries, smart search, and analytics dashboards.</p>
                         <div class="project-links">
                             <a href="projects/bizmerger.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
                             <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
@@ -417,14 +446,14 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="cloud automation" data-project='{"title":"MediParse","images":["/images/medi_parse.png"],"alt":"MediParse","desc":"Automated medical data processing platform.","tech":["Python","FastAPI","OpenCV","Tesseract OCR"],"github":"https://github.com/kirikamal/MediParse"}'>
+                <div class="project-card" data-category="ai-ml automation" data-project='{"title":"MediParse","images":["/images/mediparse_diagram.svg"],"alt":"MediParse","desc":"Automated medical data processing platform.","tech":["Python","FastAPI","OpenCV","Tesseract OCR"],"github":"https://github.com/kirikamal/MediParse"}'>
                     <picture class="project-media">
-                        <img src="images/medi_parse.png" alt="MediParse medical plaform" loading="lazy">
+                        <img src="images/mediparse_diagram.svg" alt="MediParse medical plaform" loading="lazy">
                     </picture>
                     <div class="project-info">
                         <div style="margin-bottom: 0.5rem;">
+                          <span class="project-tag">AI/ML</span>
                             <span class="project-tag">Automation</span>
-                            <span class="project-tag">AI/ML</span>
                         </div>
                         <h3>MediParse</h3>
                         <p class="text-muted">A Python-based medical document parsing system using Computer Vision and OCR to extract structured prescription and patient data from scanned forms.</p>
@@ -435,7 +464,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="fullstack automation" data-project='{"title":"Expense Trackr","images":["/images/expense_trackr_1.png"],"alt":"Expense Trackr","desc":"Expense tracking system. Developed using Python, FastAPI and MySQL.","tech":["Python","MySQL","FastAPI","Streamlit"],"github":"https://github.com/kirikamal/expense-trackr"}'>
+                <div class="project-card" data-category="fullstack" data-project='{"title":"Expense Trackr","images":["/images/expense_trackr_1.png"],"alt":"Expense Trackr","desc":"Expense tracking system. Developed using Python, FastAPI and MySQL.","tech":["Python","MySQL","FastAPI","Streamlit"],"github":"https://github.com/kirikamal/expense-trackr"}'>
                     <picture class="project-media">
                         <img src="images/expense_trackr_1.png" alt="Expense trackr" loading="lazy">
                     </picture>
@@ -452,59 +481,6 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="cloud automation" data-project='{"title":"Event-Driven Data Pipeline","images":["/images/bizmerger_web.jpg"],"alt":"Data pipeline architecture","desc":"Serverless event-driven pipeline for automated geospatial data synchronization across AWS services, reducing transfer latency by 70%.","tech":["Python","AWS Lambda","S3","EventBridge","Step Functions"],"github":"#","live":"#"}'>
-                    <picture class="project-media">
-                        <img src="images/bizmerger_web.jpg" alt="Event-driven data pipeline" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
-                            <span class="project-tag">Cloud</span>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <h3>Event-Driven Data Pipeline</h3>
-                        <p class="text-muted">Serverless geospatial data sync pipeline with AWS Lambda and S3 triggers.</p>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ai-ml automation" data-project='{"title":"ML Document Processor","images":["/images/bizmerger_web.jpg"],"alt":"ML document processing interface","desc":"Intelligent document processing system using OCR and ML classification for automated invoice and tax document handling.","tech":["Python","OpenCV","Pytesseract","scikit-learn","FastAPI"],"github":"#","live":"#"}'>
-                    <picture class="project-media">
-                        <img src="images/bizmerger_web.jpg" alt="ML document processor" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
-                            <span class="project-tag">AI/ML</span>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <h3>ML Document Processor</h3>
-                        <p class="text-muted">OCR and ML-powered document classification for automated invoice processing.</p>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cloud Infrastructure -->
-                <div class="project-card" data-category="cloud" data-project='{"title":"Multi-Environment IaC Platform","images":["/images/bizmerger_web.jpg"],"alt":"Infrastructure as Code platform","desc":"Infrastructure as Code solution using AWS CDK for automated deployment across dev, staging, and production environments with CI/CD integration.","tech":["AWS CDK","Python","CloudFormation","GitHub Actions","Docker"],"github":"#","live":"#"}'>
-                    <picture class="project-media">
-                        <img src="images/bizmerger_web.jpg" alt="IaC platform" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
-                            <span class="project-tag">Cloud</span>
-                        </div>
-                        <h3>Multi-Environment IaC</h3>
-                        <p class="text-muted">AWS CDK-based infrastructure automation with multi-environment deployments.</p>
-                        <div class="project-links">
-                            <a href="#" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
