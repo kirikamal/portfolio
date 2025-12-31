@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local RAG Document Assistant | Kiri Kamalanathan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- <nav class="navbar">
+        <div class="top-nav">
+            <div class="nav-logo">KIRI'S PORTFOLIO</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../index.html#experiences" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="../index.html#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="../index.html#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav> -->
+
+    <section class="project-hero" style="padding: 0; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; text-align: center;">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link" style="color: white; text-decoration: none; display: inline-block; margin-bottom: 0rem;">← Back to Projects</a>
+            <!-- <h1 style="font-size: 3rem; margin-bottom: 1rem;">Bizmerger</h1>
+            <p class="project-summary" style="font-size: 1.2rem; opacity: 0.9;">Commercial real estate platform.</p>
+            <div class="project-meta" style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem; font-size: 1rem;">
+                <span><strong>Client:</strong> Kesh Muthu, Singapore</span>
+                <span><strong>Role:</strong> Lead Developer & DevOps Engineer</span>
+                <span><strong>Year:</strong> 2013–2025</span>
+            </div> -->
+        </div>
+    </section>
+
+    <div class="container project-content" style="padding: 4rem 0; max-width: 900px; margin: 0 auto;">
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Local RAG Document Assistant</h2>
+
+        <img src="../images/local_rag_document_assistant.png" alt="Full NASA platform dashboard" class="project-full" style="width: 60%; border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+
+        <p style="line-height: 1.7; margin-bottom: 2rem;text-align: justify;">A powerful, privacy-focused document question-answering system that runs entirely on your local machine. Upload documents and ask questions about their content using Retrieval-Augmented Generation (RAG) powered by local AI models.
+        </p>
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Features</h2>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Multiple Format Support: PDF, Microsoft Word (.docx), and plain text (.txt) files</li>
+            <li>Intelligent Text Extraction: Specialized processors for each file type</li>
+            <li>Retrieval-Augmented Generation (RAG): Combines vector search with LLM generation</li>
+            <li>Streaming Responses: Real-time answer generation with progressive display</li>
+            <li>Source Attribution: Shows which document chunks were used to generate each answer</li>
+            <li>Context Preview: Hover over sources to view the relevant text passages</li>
+        </ul>
+
+        <h3 style="color: #00d4ff; margin-bottom: 1rem;">Tech Stack</h3>
+        <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem;">
+            <span class="pill" style="--pill-bg:#D30003;"><i class="devicon-python-plain"></i> Python, FastAPI</span>
+            <span class="pill" style="--pill-bg:#a9b3b7;--pill-color:#111;"><i class="devicon-javascript colored"></i> Vanilla JavaScript, HTML5, CSS3</span>
+            <span class="pill" style="--pill-bg:#336791;"><i class="devicon-langchain-plain"></i> LangChain, HuggingFace Transformers, Sentence Transformers (all-MiniLM-L6-v2), LocalAI (phi-3.5-mini-instruct)</span>
+            <span class="pill" style="--pill-bg:#310A62;"><i class="devicon-qdrant-plain"></i> Qdrant Vector Database</span>
+            <span class="pill" style="--pill-bg:#ff9900;--pill-color:#111;"><i class="devicon-docker-plain-wordmark"></i> Docker</span>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="../index.html#contact" class="btn btn-primary" style="margin-top: 3rem; display: inline-block;">Let’s work together →</a>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 5rem;">
+        <!-- Copy footer from index.html -->
+        <div class="container"><p>&copy; 2025 Kiri Kamalanathan. All rights reserved.</p></div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
