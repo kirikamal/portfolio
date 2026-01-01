@@ -3,7 +3,7 @@
   --bg-dark:#0a0e1a;
   --bg-darker:#050810;
   --card:#111827;
-  --muted:#94a3b8;
+  --muted:#cbd5f5;
   --accent:#3b82f6;
   --accent-2:#0ea5e9;
   --accent-3:#06b6d4;
@@ -12,6 +12,7 @@
   --card-hover: rgba(59,130,246,0.1);
   --max-width:1200px;
   --glow: 0 0 40px rgba(59,130,246,0.3);
+  --top-nav-height: 96px;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -104,7 +105,7 @@ body::before {
   text-decoration:none;
   text-transform: uppercase;
   padding:0.45rem 0.6rem;
-  border-radius:6px;
+  border-radius:999px;
   transition:all .18s ease;
   font-weight:500;
   font-size:0.95rem;
@@ -112,7 +113,7 @@ body::before {
 }
 .nav-link:hover{ color:#fff; background:rgba(255,255,255,0.03); }
 .nav-link.active{
-  color:#fff;
+  color:#060000;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
@@ -568,6 +569,11 @@ body::before {
   padding-left: 1.25rem;
 }
 
+.certification {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
 /* Small screens */
 @media (max-width:820px){
   .accordion-item{
@@ -613,7 +619,7 @@ body::before {
 .skill-category h3 {
     font-size: 1.16rem;
     margin-bottom: 1.2rem;
-    color: #00d4ff;
+    color: #fff;
     font-weight: 600;
 }
 
