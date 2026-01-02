@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local RAG Document Assistant | Kiri Kamalanathan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <section class="project-hero" style="padding: 0; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: white; text-align: center;">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link" style="color: white; text-decoration: none; display: inline-block; margin-bottom: 0rem;">← Back to Projects</a>
+        </div>
+    </section>
+
+    <div class="container project-content" style="padding: 4rem 0; max-width: 900px; margin: 0 auto;">
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Local RAG Document Assistant</h2>
+
+        <img src="../images/local_rag_document_assistant.png" alt="Loca RAG Document Assistant" class="project-full" style="width: 100%; border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+
+        <p style="line-height: 1.7; margin-bottom: 2rem;text-align: justify;">
+            The Local RAG Document Assistant is a privacy-focused, AI-powered document question-answering system that operates entirely on your local machine. This intelligent application leverages Retrieval Augmented Generation (RAG) technology to analyze documents and provide accurate, context-aware answers to natural language questions.
+        </p>
+        <p style="line-height: 1.7; margin-bottom: 2rem;text-align: justify;">
+            Built with modern technologies and designed for complete data privacy, the system allows users to upload various document formats (PDF, Word, and text files) and interact with their content through an intuitive chat interface. All processing happens locally, no data ever leaves your computer, ensuring complete privacy and security.
+        </p>
+        <p style="line-height: 1.7; margin-bottom: 2rem;text-align: justify;">
+            The application combines cutting-edge AI techniques including vector embeddings, semantic search, and large language models to deliver fast, accurate responses with source attribution, making it ideal for research, legal review, technical documentation analysis, and personal knowledge management.
+        </p>
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem; margin-top: 1.5rem;">The Core Problem</h3>
+        <p style="line-height: 1.7; margin-bottom: 2rem;text-align: justify;">
+            The Information Overload and Privacy Concerns in Document Analysis.
+        </p>
+
+        <p style="line-height: 1.7; margin-bottom: 2rem;text-align: justify;">
+            This project addresses two critical pain points.
+        </p>
+
+
+        <h4 style="color: #fff; margin-bottom: 1rem;">1. Information Retrieval Challenge</h4>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>People have massive amounts of documents (research papers, legal contracts, technical documentation, meeting notes, etc.)</li>
+            <li>Finding specific information buried in hundreds of pages is time-consuming and tedious</li>
+            <li>Traditional search (Ctrl+F) only finds exact keyword matches, missing contextual or semantic information</li>
+            <li>Reading entire documents to answer simple questions is inefficient</li>
+        </ul>
+
+        <p style="font-weight: bold;">Real World Example:</p>
+        <p style="line-height: 1.7; font-style: italic; margin-bottom: 2rem; padding-left: 1.5rem;">
+            "Imagine you have a 200-page legal contract and need to know: "What are the termination conditions?" Traditional approach: Read through 200 pages or search for keywords like "termination" and manually check each occurrence. With this project: Ask the question naturally, get an AI-generated answer with exact source citations in seconds."
+        </p>
+
+        <h4 style="color: #fff; margin-bottom: 1rem;">2. The Privacy and Security Dilemma</h4>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.8rem;">
+            <li>Existing AI document analysis tools require uploading sensitive documents to external servers</li>
+            <li>This creates privacy risks for:</li>
+                <ul style="line-height: 1.7; padding-left: 1.5rem;">
+                    <li>Confidential business documents</li>
+                    <li>Legal contracts with NDA clauses</li>
+                    <li>Personal medical records</li>
+                    <li>Research data before publication</li>
+                    <li>Proprietary technical documentation</li>
+                </ul>
+            <li>Organizations often cannot use cloud AI due to compliance regulations</li>
+        </ul>
+
+        <p style="font-weight: bold;">Real World Example:</p>
+        <p style="line-height: 1.7; font-style: italic; margin-bottom: 2rem; padding-left: 1.5rem;">
+            "A company wants to analyze client contracts using AI, but: Company policy forbids sharing confidential documents externally"
+        </p>
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;margin-top: 3.5rem;">The Solution This Project Provides</h2>
+
+        <h3 style="color: #fff; margin-bottom: 1rem;">Intelligent Document Q&A Without Compromising Privacy</h3>
+
+        <img src="../images/local_rag_dfd.png" alt="Loca RAG Document Assistant" class="project-full" style="width: 80%; border-radius: 20px; margin-bottom: 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
+
+        <h3 style="color: #fff; margin-bottom: 1rem;">How it does:</h3>
+        <p style="color: #fff; margin-bottom: 1rem;">The simple 3-Step Process</p>
+        <h4 style="color: #fff; margin-bottom: 1rem;">Step 1: Upload Your Documents</h4>
+
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Drag and drop or upload your files (PDFs, Word documents or text files) into the application</li>
+            <li>Click upload and wait for a few seconds</li>
+            <li>The system reads your document and breaks it into smaller, digestible pieces</li>
+            <li>Each piece gets converted into a special "fingerprint" (called a vector) that captures its meaning</li>
+            <li>These fingerprints are saved in a vector database (Qdrant database) that can find similar content instantly</li>
+        </ul>
+
+        <h4 style="color: #fff; margin-bottom: 1rem;">Step 2: Ask Your Questions</h4>
+            <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+                <li>Type a natural question </li>
+                <li>Hit enter and watch the answer appear in real-time</li>
+                <li>Your question also gets converted into a "fingerprint"</li>
+                <li>The system searches through all the document chunks to find the ones most relevant to your question</li>
+                <li>It picks the top 2-3 most relevant chunks that likely contain your answer</li>
+                <li>These chunks are sent to an AI language model running on your computer</li>
+                <li>The AI reads the relevant sections and writes a clear, natural answer</li>
+            </ul>
+
+        <h4 style="color: #fff; margin-bottom: 1rem;">Step 3: Get Answers with Proof</h4>
+            <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+                <li>A clear, well-written answer appears on your screen in real-time (using only YOUR documents)</li>
+                <li>Below the answer, you see which parts of your document were used to create the response</li>
+                <li>You can click on the sources to read the original text for verification</li>
+            </ul>
+
+        <p>&nbsp;</p>
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;margin-top: 3.5rem;">Features</h2>
+        <h3>Multi-Format Document Support</h3>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Upload and process PDF, Microsoft Word (.docx), and plain text (.txt) files</li>
+            <li>Intelligent text extraction with specialized processors for each format</li>
+            <li>Support for paragraphs, tables, and complex document structures</li>
+            <li>Automatic encoding detection (UTF-8 and Latin-1 fallback)</li>
+        </ul>
+
+        <h3>Advanced AI-Powered Analysis</h3>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Retrieval-Augmented Generation (RAG) for accurate, context-based answers</li>
+            <li>Semantic search using 384-dimensional vector embeddings</li>
+            <li>Real-time streaming responses with progressive display</li>
+            <li>Top-K chunk retrieval with cosine similarity scoring</li>
+            <li>Source attribution with interactive context preview</li>
+        </ul>
+
+        <h3>Privacy & Performance</h3>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>100% local processing, no external API calls or data sharing</li>
+            <li>Efficient token-based text chunking (600 tokens per chunk)</li>
+            <li>Batch embedding generation for optimal performance</li>
+            <li>Vector database indexing for fast similarity search</li>
+            <li>Optimized for documents with hundreds of pages</li>
+        </ul>
+
+        <h3>Modern User Experience</h3>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Clean, responsive web interface with gradient design</li>
+            <li>Drag-and-drop document upload functionality</li>
+            <li>Multiple document management with easy switching</li>
+            <li>General Q&A mode (works without selecting documents)</li>
+            <li>Real-time typing indicators and progress feedback</li>
+            <li>Hover-to-expand source citations with full context</li>
+        </ul>
+
+        <p>&nbsp;</p>
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;margin-top: 3.5rem;">Technical Highlights</h2>
+
+        <h3>Microservices Architecure</h3>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Document Service (Port 9000): FastAPI-based REST API</li>
+            <li>Embeddings Service (Port 8080): Sentence Transformers model</li>
+            <li>LocalAI Service (Port 8081): phi-3.5-mini-instruct LLM</li>
+            <li>Qdrant Vector Database (Port 6333): COSINE distance metric</li>
+            <li>Frontend (Port 80): Vanilla JavaScript SPA with Nginx</li>
+        </ul>
+
+        <h3>Intelligent Pipeline Processing</h3>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Document upload and validation</li>
+            <li>Text extraction (PyPDF2, python-docx)</li>
+            <li>Smart chunking with TokenTextSplitter</li>
+            <li>Batch embedding generation (100 chunks at a time)</li>
+            <li>Vector storage with metadata in Qdrant</li>
+            <li>Real-time similarity search on queries</li>
+            <li>Context aware LLM answer generation</li>
+            <li>Streaming response delivery to frontend</li>
+        </ul>
+
+        <h3>Development</h3>
+        <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+            <li>Docker Compose orchestration for one command deployment</li>
+            <li>RESTful API with comprehensive endpoints</li>
+            <li>Logging and error handling throughout</li>
+            <li>Clean separation of concerns</li>
+            <li>Health checks for all services</li>
+        </ul>
+
+        <p>&nbsp;</p>
+
+        <h2 style="color: #00d4ff; margin-bottom: 1rem;">Technology Stack</h2>
+
+        <h3>Frontend</h3>
+        <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+                <li><strong>JavaScript:</strong> Vanilla JS for lightweight, fast performance</li>
+                <li><strong>UI/UX:</strong> Responsive design, smooth transitions, interactive elemnts</li>
+                <li><strong>Communication:</strong> Fetch API for Restful communication, Server-Sent Events (SSE) for streaming</li>
+            </ul>
+        </div>
+
+        <h3>Backend Framework</h3>
+        <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+                <li><strong>Python 3.x:</strong> Primary programming language</li>
+                <li><strong>FastAPI:</strong> high performance web framework</li>
+                <li><strong>Pydantic:</strong> Data validation</li>
+                <li><strong>Uvicorn:</strong> ASGI server for async request handling</li>
+            </ul>
+        </div>
+
+        <h3>AI & Machine Learning</h3>
+        <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+                <li><strong>LangChaain:</strong> text processing and chunking (TokenTextSplitter)</li>
+                <li><strong>HuggingFace Transformers:</strong> Foundation for embedding models</li>
+                <li><strong>Sentence Transformers:</strong> all-MiniLM-L6-v2 model</li>
+                <li><strong>LocalAI:</strong> Self-hosted LLM inference (phi-3.5-mini-instruct)</li>
+                <li><strong>RAG Architecture:</strong> Retrieval Augmented Generation implementation</li>
+            </ul>
+        </div>
+
+        <h3>Data & Storage</h3>
+        <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+                <li><strong>Qdrant:</strong> High performance vector database</li>
+                <li><strong>Vector Indexing:</strong> COSINE distance metric for similarity <search></search></li>
+                <li><strong>Collections:</strong> Per document vector storage with metadata</li>
+                <li><strong>Payloads:</strong> JSON structured chunk data with processing stats</li>
+            </ul>
+        </div>
+
+        <h3>Infrastructure & DevOps</h3>
+        <div class="tech-stack" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <ul style="line-height: 1.7; margin-bottom: 2rem; padding-left: 1.5rem;">
+                <li><strong>Docker:</strong> Containerization for all services</li>
+                <li><strong>Nginx:</strong> Web server for frontend static files <search></search></li>
+                <li><strong>Volume Mounts:</strong> Persistent storage for models and data</li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="https://github.com/kirikamal/local-rag-document-assistant" class="text-muted" target="_blank" rel="noopener"><i class="fab fa-github" style="padding-right:5px;"></i>Git repo</a>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="../index.html#contact" class="btn btn-primary" style="margin-top: 3rem; display: inline-block;">Let’s work together →</a>
+        </div>
+    </div>
+
+    <footer class="footer" style="margin-top: 5rem;">
+        <div class="container"><p>&copy; 2025 Kiri Kamalanathan. All rights reserved.</p></div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
