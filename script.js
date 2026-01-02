@@ -114,11 +114,13 @@ document.addEventListener('DOMContentLoaded', function () {
           // Show card with staggered animation
           setTimeout(() => {
             card.style.display = 'block';
-            card.style.animation = 'fadeInUp 0.5s ease forwards';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
           }, index * 50);
         } else {
           // Hide card
-          card.style.animation = 'fadeOut 0.3s ease forwards';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
           setTimeout(() => {
             card.style.display = 'none';
           }, 300);
@@ -223,64 +225,6 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
 
-// Project modal handling (added)
-(function () {
-  const modalBackdrop = document.getElementById('project-modal-backdrop');
-  const modalImage = document.getElementById('modal-image');
-  const modalTitle = document.getElementById('modal-title');
-  const modalDesc = document.getElementById('modal-desc');
-  const modalTech = document.getElementById('modal-tech');
-  const modalGithub = document.getElementById('modal-github');
-  const modalLive = document.getElementById('modal-live');
-  const modalClose = document.getElementById('modal-close');
-
-  function openModal(data) {
-    try {
-      const project = typeof data === 'string' ? JSON.parse(data) : data;
-      modalTitle.textContent = project.title || 'Project';
-      modalDesc.textContent = project.desc || '';
-      modalTech.textContent = project.tech ? 'Tech: ' + project.tech.join(' • ') : '';
-      modalGithub.href = project.github || '#';
-      modalLive.href = project.live || '#';
-
-      // choose best available image (use last item as largest)
-      const imgSrc = (project.images && project.images[project.images.length - 1]) || '';
-      modalImage.src = imgSrc;
-      modalImage.alt = project.alt || project.title || 'Project image';
-
-      modalBackdrop.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      modalClose.focus();
-    } catch (err) {
-      console.error('Failed to open project modal', err);
-    }
-  }
-
-  function closeModal() {
-    modalBackdrop.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    modalImage.src = '';
-  }
-
-  document.querySelectorAll('.project-details').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const card = e.target.closest('.project-card');
-      if (!card) return;
-      const data = card.getAttribute('data-project');
-      openModal(data);
-    });
-  });
-
-  modalClose.addEventListener('click', closeModal);
-  modalBackdrop.addEventListener('click', (e) => {
-    if (e.target === modalBackdrop) closeModal();
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalBackdrop.getAttribute('aria-hidden') === 'false') {
-      closeModal();
-    }
-  });
-})();
 
 
 // Project Tabs

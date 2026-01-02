@@ -27,18 +27,6 @@
       gtag('config', 'G-XXXXXXXX', { 'anonymize_ip': true });
     </script>
 
-    <!-- Minimal modal styles (can be moved to style.css) -->
-    <style>
-      .modal-backdrop{ position:fixed; inset:0;background:rgba(2,6,23,0.6); display:none; align-items:center; justify-content:center; z-index:2000; }
-      .modal-backdrop[aria-hidden="false"]{ display:flex; }
-      .modal{ background: #071022; max-width:900px; width:95%; border-radius:12px; overflow:hidden; box-shadow:0 40px 120px rgba(2,6,23,0.7); border:1px solid rgba(255,255,255,0.04); }
-      .modal-grid{ display:grid; grid-template-columns:1fr 1fr; gap:0; }
-      .modal-media img{ width:100%; height:100%; object-fit:cover; display:block; }
-      .modal-body{ padding:1.2rem; color:var(--muted); }
-      .modal-title{ color:#fff; margin-bottom:0.6rem; font-size:1.25rem; }
-      .modal-close{ background:transparent;border:0;color:var(--muted); font-size:1rem; cursor:pointer; }
-      @media (max-width:800px){ .modal-grid{ grid-template-columns:1fr; } }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -461,103 +449,64 @@
             </div>
 
             <div class="projects-grid">
-              <div class="project-card" data-category="ai-ml automation" data-project='{"title":"Local RAG Document Assistant","images":["/images/local_rag_document_assistant.png"],"alt":"RAG","desc":"Upload documents and query them using semantic search powered by embeddings and Qdrant.","tech":["Python","FastAPI","Qdrant","Langchain", "HuggingFace Transformers"],"github":"https://github.com/kirikamal/local-rag-document-assistant"}'>
-                    <picture class="project-media">
-                        <img src="images/local_rag_document_assistant.png" alt="local RAG" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
-                          <span class="project-tag">AI/ML</span>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <h3>Local RAG Document Assistant</h3>
-                        <p class="text-muted">A powerful, privacy-focused document question-answering system that runs entirely on your local machine. Upload documents and ask questions about their content using Retrieval-Augmented Generation (RAG) powered by local AI models.</p>
-                        <div class="project-links">
-                            <a href="projects/local_rag_document_assistant.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
+              <a href="projects/local-rag-document-assistant.html" class="project-card" data-category="ai-ml automation">
+                    <div class="project-image">
+                        <img src="images/local_rag_document_assistant.png" alt="Local RAG Document Assistant" loading="lazy">
                     </div>
-                </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                          <span class="project-tag">AI/ML</span>
+                          <span class="project-tag">Automation</span>
+                        </div>
+                        <h3 class="project-title">Local RAG Document Assistant</h3>
+                        <p class="project-description">A privacy-focused document question-answering system running locally. Upload documents and query them using RAG powered by local AI models.</p>
+                    </div>
+                </a>
 
-                <div class="project-card" data-category="fullstack" data-project='{"title":"Bizmerger","images":["/images/bizmerger_web.jpg"],"alt":"Bizmerger","desc":"Ruby on Rails based real-estate platform with smart search, AI-powered summaries, and interactive dashboards for Commercial business.","tech":["Ruby on Rails","Hotwire","Monolithic","PostgreSQL"],"live":"https://www.bizmerger.com"}'>
-                    <picture class="project-media">
-                        <img src="images/bizmerger_web.jpg" alt="Business listing platform" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
+                <a href="projects/bizmerger.html" class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="images/bizmerger_web.jpg" alt="Bizmerger Platform" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
                             <span class="project-tag">Full-Stack</span>
                         </div>
-                        <h3>Bizmerger</h3>
-                        <p class="text-muted">Real-estate platform for commercial businesses with AI summaries, smart search, and analytics dashboards.</p>
-                        <div class="project-links">
-                            <a href="projects/bizmerger.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
+                        <h3 class="project-title">Bizmerger</h3>
+                        <p class="project-description">Real-estate platform for commercial businesses with AI summaries, smart search, and analytics dashboards.</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card" data-category="ai-ml automation" data-project='{"title":"MediParse","images":["/images/mediparse_diagram.svg"],"alt":"MediParse","desc":"Automated medical data processing platform.","tech":["Python","FastAPI","OpenCV","Tesseract OCR"],"github":"https://github.com/kirikamal/MediParse"}'>
-                    <picture class="project-media">
-                        <img src="images/mediparse_diagram.svg" alt="MediParse medical plaform" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
+                <a href="projects/medi-parse.html" class="project-card" data-category="ai-ml automation">
+                    <div class="project-image">
+                        <img src="images/mediparse_diagram.svg" alt="MediParse Platform" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
                           <span class="project-tag">AI/ML</span>
-                            <span class="project-tag">Automation</span>
+                          <span class="project-tag">Automation</span>
                         </div>
-                        <h3>MediParse</h3>
-                        <p class="text-muted">A Python-based medical document parsing system using Computer Vision and OCR to extract structured prescription and patient data from scanned forms.</p>
-                        <div class="project-links">
-                            <a href="projects/medi-parse.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
+                        <h3 class="project-title">MediParse</h3>
+                        <p class="project-description">Medical document parsing system using Computer Vision and OCR to extract structured prescription and patient data from scanned forms.</p>
                     </div>
-                </div>
+                </a>
 
-                <div class="project-card" data-category="fullstack" data-project='{"title":"Expense Trackr","images":["/images/expense_trackr_1.png"],"alt":"Expense Trackr","desc":"Expense tracking system. Developed using Python, FastAPI and MySQL.","tech":["Python","MySQL","FastAPI","Streamlit"],"github":"https://github.com/kirikamal/expense-trackr"}'>
-                    <picture class="project-media">
-                        <img src="images/expense_trackr_1.png" alt="Expense trackr" loading="lazy">
-                    </picture>
-                    <div class="project-info">
-                        <div style="margin-bottom: 0.5rem;">
+                <a href="projects/expense-trackr.html" class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="images/expense_trackr_1.png" alt="Expense Trackr" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
                             <span class="project-tag">Full-Stack</span>
                         </div>
-                        <h3>Expense Trackr</h3>
-                        <p class="text-muted">A full-stack Python application using FastAPI for a RESTful backend and Streamlit for an interactive frontend, built with clean architecture and extensibility in mind.</p>
-                        <div class="project-links">
-                            <a href="projects/expense-trackr.html" aria-label="View project details"><i class="fas fa-arrow-right"></i></a>
-                            <button class="btn btn-secondary project-details" type="button" aria-haspopup="dialog">Details</button>
-                        </div>
+                        <h3 class="project-title">Expense Trackr</h3>
+                        <p class="project-description">Full-stack Python application with FastAPI backend and Streamlit frontend, built with clean architecture and extensibility in mind.</p>
                     </div>
-                </div>
+                </a>
 
             </div>
         </div>
     </section>
 
-    <!-- Project modal (shared) -->
-    <div id="project-modal-backdrop" class="modal-backdrop" aria-hidden="true">
-      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-        <div class="modal-grid">
-          <div class="modal-media">
-            <img id="modal-image" src="" alt="">
-          </div>
-          <div class="modal-body">
-            <div style="display:flex;justify-content:space-between;align-items:center;">
-              <h3 id="modal-title" class="modal-title"></h3>
-              <button id="modal-close" class="modal-close" aria-label="Close project details">&times;</button>
-            </div>
-            <p id="modal-desc" class="text-muted"></p>
-            <p id="modal-tech" class="text-muted" aria-live="polite"></p>
-            <div style="margin-top:0.8rem">
-              <a id="modal-github" class="text-muted" target="_blank" rel="noopener">GitHub <i class="fab fa-github"></i></a>
-              <span style="margin-left:0.8rem"></span>
-              <a id="modal-live" class="text-muted" target="_blank" rel="noopener">Live demo <i class="fas fa-external-link-alt"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
